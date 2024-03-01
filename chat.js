@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para obtener la lista de usuarios del chat
     function obtenerUsuariosDelChat() {
-        fetch('http://uwu-guate.site:3000/messages')
+        fetch('https://arpanetos.lol:3000/messages')
             .then(response => response.json())
             .then(data => {
                 // Crear un conjunto para almacenar nombres de usuario únicos
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Enviar el mensaje al servidor
-        fetch('http://uwu-guate.site:3000/messages', {
+        fetch('https://arpanetos.lol:3000/messages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function obtenerMensajes() {
         const usuarios = new Set(); // Para almacenar usuarios únicos
-        fetch('http://uwu-guate.site:3000/messages')
+        fetch('https://arpanetos.lol:3000/messages')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Error de red: ${response.status}`);
